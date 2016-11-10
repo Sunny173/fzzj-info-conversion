@@ -4,11 +4,11 @@ import jxl.Cell;
 import jxl.Sheet;
 
 /**
- * 定义excel表中每个字段的位置 根据field_type判断当前这个字段是
- * {@link Person}中的每个字段都会有一个对应的FieldPosition信息
+ * 定义excel表中每个字段的位置 根据field_type判断当前这个字段是 {@link Person}
+ * 中的每个字段都会有一个对应的FieldPosition信息
  * 
  * @author sunny
- *
+ * 
  */
 public class FieldPosition {
 	public static final int NMAE = 1001;
@@ -76,10 +76,11 @@ public class FieldPosition {
 	 *            对应{@link Person}中的每个字段
 	 * 
 	 */
-	public FieldPosition(String key_field, int key_column, int key_row, boolean to_more, int type) {
+	public FieldPosition(String key_field, int key_column, int key_row,
+			boolean to_more, int type) {
 		init(key_field, key_column, key_row, type);
-		value_row = new int[10];
-		for (int i = 0; i < 10; i++) {
+		value_row = new int[6];
+		for (int i = 0; i < 6; i++) {
 			value_row[i] = key_row + i + 1;
 		}
 		value_column = key_column;
@@ -97,7 +98,8 @@ public class FieldPosition {
 	 * @param type
 	 *            对应{@link Person}中的每个字段
 	 */
-	public FieldPosition(String key_field, int key_column, int key_row, int type, int key_to_value_postion) {
+	public FieldPosition(String key_field, int key_column, int key_row,
+			int type, int key_to_value_postion) {
 		init(key_field, key_column, key_row, type);
 		int[] temp = { key_row };
 		value_row = temp;
@@ -105,7 +107,7 @@ public class FieldPosition {
 	}
 
 	private void init(String key_field, int key_column, int key_row, int type) {
-		this.key_field = key_field.trim().replace(" ", "");
+		this.key_field = key_field.trim().replace(" ", "").replaceAll("　", "");
 		this.key_column = key_column;
 		this.key_row = key_row;
 		field_type = type;
@@ -134,7 +136,8 @@ public class FieldPosition {
 	 */
 	public boolean validateField(Sheet sheet) {
 		Cell keyCell = sheet.getCell(key_column, key_row);
-		String strc00 = keyCell.getContents().trim().replace(" ", "");
+		String strc00 = keyCell.getContents().trim().replace(" ", "")
+				.replaceAll("　", "");
 		return key_field.equals(strc00);
 	}
 }

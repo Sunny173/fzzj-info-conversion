@@ -52,7 +52,7 @@ public class ReadRegex {
 			// FieldList filed = gson.fromJson(jsonStr, FieldList.class);
 			FieldPosition temp = filed.get(0);
 			System.out.println(filed.size());
-			System.out.println(temp.key_column);
+//			System.out.println(temp.key_column);
 		}
 		// return null;
 	}
