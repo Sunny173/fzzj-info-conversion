@@ -13,35 +13,35 @@ import jxl.Sheet;
  */
 public class Person {
 	// 姓名
-	String name;
+	public String name;
 	// 手机
-	String phone;
+	public String phone;
 	// 性别
-	String sex;
+	public String sex;
 	// 组别 山上5组 包含山上、山下、京外
-	String group;
+	public String group;
 	// 类别 讲师、班长、学员（常住前）
-	String role;
+	public String role;
 	// 出生年月
-	String from_date;
+	public String from_date;
 	// 专业
-	String zhuan_ye;
+	public String zhuan_ye;
 	// 最高学历毕业院校
-	String school;
+	public String school;
 	// 学历
-	String education;
+	public String education;
 	// 外语等级
-	String language_class;
+	public String language_class;
 	// 职业
-	String occupation;
+	public String occupation;
 	// 职务
-	String job;
+	public String job;
 	// 婚姻
-	String marriage;
+	public String marriage;
 	// 户口所在地
-	String Hukou;
+	public String Hukou;
 	// 常住前承担的部组
-	String changzhu_buzu;
+	public String changzhu_buzu;
 
 	Sheet sheet;
 

@@ -63,7 +63,8 @@ public class FieldPosition {
 	}
 
 	/**
-	 * 列子『 学 校 \n 李四 』 值-李四的计算方式=列（key_column+1） 行（key_row）
+	 * 列子『学校及单位名称 吉林省长春市农安县金山小学 吉林省长春市农安县黄金乡黄金二中学校 长春市干调市场营业员 上海市一家礼品店营业员 』
+	 * 值-后面学校的计算方式的计算方式=列（key_column） 行（key_row+i，默认向下读10个行）
 	 * 
 	 * @param key_field
 	 *            ：姓名
@@ -84,6 +85,18 @@ public class FieldPosition {
 		value_column = key_column;
 	}
 
+	/**
+	 * 两列之间距离较大
+	 * 
+	 * @param key_field
+	 *            ：姓名
+	 * @param key_column
+	 *            ：姓名在excel表中列位置，从0开始
+	 * @param key_row
+	 *            ：姓名在excel表中行位置，从0开始
+	 * @param type
+	 *            对应{@link Person}中的每个字段
+	 */
 	public FieldPosition(String key_field, int key_column, int key_row, int type, int key_to_value_postion) {
 		init(key_field, key_column, key_row, type);
 		int[] temp = { key_row };
