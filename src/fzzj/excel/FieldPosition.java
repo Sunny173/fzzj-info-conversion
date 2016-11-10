@@ -125,4 +125,16 @@ public class FieldPosition {
 
 		return str;
 	}
+
+	/**
+	 * 表示字段名相當,開始記錄真實數據
+	 * 
+	 * @param sheet
+	 * @return
+	 */
+	public boolean validateField(Sheet sheet) {
+		Cell keyCell = sheet.getCell(key_column, key_row);
+		String strc00 = keyCell.getContents().trim().replace(" ", "");
+		return key_field.equals(strc00);
+	}
 }

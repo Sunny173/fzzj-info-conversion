@@ -38,32 +38,16 @@ public class Test {
 			try {
 				Workbook wb = Workbook.getWorkbook(file);
 				Sheet sheet = wb.getSheet(0); // 从工作区中取得页（Sheet）
-				Person person = new Person(sheet);
+				Person person = new Person(file);
 				// 若第一種規則匹配，不用在匹配其他
 				// ArrayList<FieldPosition> regex2 = regexs.get(2);
 				// person.setData1(regex2);
 				for (int i = 0; i < regexs.size(); i++) {
 					// System.out.println("第" + (i + 1) + "種規則");
-					ArrayList<FieldPosition> regex = regexs.get(i);
-					boolean isContinut = person.setData1(regex);
-					if (isContinut) {
+					if (person.analysisRegex(regexs.get(i))) {
 						break;
 					}
 
-				}
-				if (person.name == null) {
-					sheet = wb.getSheet(1);
-					person = new Person(sheet);
-					// 若第一種規則匹配，不用在匹配其他
-					for (int i = 0; i < regexs.size(); i++) {
-						// System.out.println("第" + (i + 1) + "種規則");
-						ArrayList<FieldPosition> regex = regexs.get(i);
-						boolean isContinut = person.setData1(regex);
-						if (isContinut) {
-							break;
-						}
-
-					}
 				}
 				if (person.name == null) {
 					errFileList.add(file);

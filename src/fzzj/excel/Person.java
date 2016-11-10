@@ -1,9 +1,11 @@
 package fzzj.excel;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import jxl.Cell;
 import jxl.Sheet;
+import jxl.Workbook;
 
 /**
  * excel表所需字段信息
@@ -44,9 +46,14 @@ public class Person {
 	public String changzhu_buzu;
 
 	Sheet sheet;
+	File file;
 
 	public Person(Sheet sheet) {
 		this.sheet = sheet;
+	}
+
+	public Person(File file) {
+		this.file = file;
 	}
 
 	@Override
@@ -135,6 +142,38 @@ public class Person {
 		}
 		return true;
 
+	}
+
+	/**
+	 * 将创建时传过来的文件，根据规则全部解析出来
+	 * 
+	 * @param regex
+	 * @return 規則可以全部正確的讀取數據，結束外層（其他規則）循環 true： name ！= null,有数据，表示不需要读取下一个规则
+	 */
+	public boolean analysisRegex(ArrayList<FieldPosition> regex) {
+		try {
+			Workbook wb = Workbook.getWorkbook(file);
+			// 第一列的值，获取第一行，
+			for (FieldPosition fieldPosition : regex) {
+				sheet = wb.getSheet(0); // 从工作区中取得页（Sheet）
+				if (fieldPosition.validateField(sheet)) {
+					// 表示字段名相當,開始記錄真實數據
+					setData(fieldPosition);
+				} else {
+					// 两种可能，规则不对，还有其他表
+					// 文件名,下一种规则
+					sheet = wb.getSheet(1);
+					if (fieldPosition.validateField(sheet)) {
+						// 表示字段名相當,開始記錄真實數據
+						setData(fieldPosition);
+					}
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		// name ！= null,表示不需要读取下一个规则
+		return name != null;
 	}
 
 	// 上山常住时间
