@@ -1,121 +1,709 @@
-[
-  {
-    "key_field": "姓　　名",
-    "key_column": 0,
-    "key_row": 3,
-    "value_column": 1,
-    "value_row": [
-      3
-    ]
-  },
-  {
-    "key_field": "手机号码",
-    "key_column": 0,
-    "key_row": 12,
-    "value_column": 1,
-    "value_row": [
-      12
-    ]
-  },
-  {
-    "key_field": "性　　别",
-    "key_column": 2,
-    "key_row": 4,
-    "value_column": 3,
-    "value_row": [
-      4
-    ]
-  },
-  {
-    "key_field": "专　　业",
-    "key_column": 2,
-    "key_row": 7,
-    "value_column": 3,
-    "value_row": [
-      7
-    ]
-  },
-  {
-    "key_field": "学校及单位名称",
-    "key_column": 2,
-    "key_row": 16,
-    "value_column": 2,
-    "value_row": [
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33,
-      34,
-      35,
-      36,
-      37
-    ]
-  },
-  {
-    "key_field": "学　　历",
-    "key_column": 0,
-    "key_row": 7,
-    "value_column": 1,
-    "value_row": [
-      7
-    ]
-  },
-  {
-    "key_field": "外语语种（水平）",
-    "key_column": 0,
-    "key_row": 10,
-    "value_column": 1,
-    "value_row": [
-      10
-    ]
-  },
-  {
-    "key_field": "职　　业",
-    "key_column": 0,
-    "key_row": 8,
-    "value_column": 1,
-    "value_row": [
-      8
-    ]
-  },
-  {
-    "key_field": "职　　务",
-    "key_column": 2,
-    "key_row": 8,
-    "value_column": 3,
-    "value_row": [
-      8
-    ]
-  },
-  {
-    "key_field": "婚姻状况",
-    "key_column": 4,
-    "key_row": 6,
-    "value_column": 5,
-    "value_row": [
-      6
-    ]
-  },
-  {
-    "key_field": "承担部组",
-    "key_column": 0,
-    "key_row": 11,
-    "value_column": 1,
-    "value_row": [
-      11
-    ]
-  }
-]
+{
+  "regex_data": [
+    {
+      "regexName": "1,（2015-3-20第七版）",
+      "regexFields": [
+        {
+          "field_type": 1001,
+          "key_field": "姓名",
+          "key_column": 4,
+          "key_row": 4,
+          "value_column": 10,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1002,
+          "key_field": "手机号码",
+          "key_column": 4,
+          "key_row": 5,
+          "value_column": 10,
+          "value_row": [
+            5
+          ]
+        },
+        {
+          "field_type": 1009,
+          "key_field": "学历",
+          "key_column": 4,
+          "key_row": 7,
+          "value_column": 10,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1011,
+          "key_field": "职业",
+          "key_column": 4,
+          "key_row": 8,
+          "value_column": 10,
+          "value_row": [
+            8
+          ]
+        },
+        {
+          "field_type": 1010,
+          "key_field": "外语语种（水平）",
+          "key_column": 4,
+          "key_row": 10,
+          "value_column": 13,
+          "value_row": [
+            10
+          ]
+        },
+        {
+          "field_type": 1015,
+          "key_field": "承担部组",
+          "key_column": 4,
+          "key_row": 11,
+          "value_column": 10,
+          "value_row": [
+            11
+          ]
+        },
+        {
+          "field_type": 1014,
+          "key_field": "家庭地址",
+          "key_column": 0,
+          "key_row": 12,
+          "value_column": 1,
+          "value_row": [
+            12
+          ]
+        },
+        {
+          "field_type": 1003,
+          "key_field": "性别",
+          "key_column": 21,
+          "key_row": 4,
+          "value_column": 27,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1007,
+          "key_field": "专业",
+          "key_column": 21,
+          "key_row": 7,
+          "value_column": 27,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1012,
+          "key_field": "职务",
+          "key_column": 21,
+          "key_row": 8,
+          "value_column": 27,
+          "value_row": [
+            8
+          ]
+        },
+        {
+          "field_type": 1006,
+          "key_field": "出生年月日",
+          "key_column": 35,
+          "key_row": 4,
+          "value_column": 39,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1013,
+          "key_field": "婚姻状况",
+          "key_column": 35,
+          "key_row": 6,
+          "value_column": 39,
+          "value_row": [
+            6
+          ]
+        },
+        {
+          "field_type": 1008,
+          "key_field": "学校及单位名称",
+          "key_column": 16,
+          "key_row": 15,
+          "value_column": 16,
+          "value_row": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        }
+      ],
+      "isUsed": true
+    },
+    {
+      "regexName": "2, (2015-09-12第9版)",
+      "regexFields": [
+        {
+          "field_type": 1001,
+          "key_field": "姓名",
+          "key_column": 0,
+          "key_row": 4,
+          "value_column": 1,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1009,
+          "key_field": "学历",
+          "key_column": 0,
+          "key_row": 7,
+          "value_column": 1,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1011,
+          "key_field": "职业",
+          "key_column": 0,
+          "key_row": 8,
+          "value_column": 1,
+          "value_row": [
+            8
+          ]
+        },
+        {
+          "field_type": 1010,
+          "key_field": "外语语种（水平）",
+          "key_column": 0,
+          "key_row": 10,
+          "value_column": 1,
+          "value_row": [
+            10
+          ]
+        },
+        {
+          "field_type": 1015,
+          "key_field": "承担部组",
+          "key_column": 0,
+          "key_row": 11,
+          "value_column": 1,
+          "value_row": [
+            11
+          ]
+        },
+        {
+          "field_type": 1002,
+          "key_field": "手机号码",
+          "key_column": 0,
+          "key_row": 12,
+          "value_column": 1,
+          "value_row": [
+            12
+          ]
+        },
+        {
+          "field_type": 1014,
+          "key_field": "家庭地址",
+          "key_column": 0,
+          "key_row": 13,
+          "value_column": 1,
+          "value_row": [
+            13
+          ]
+        },
+        {
+          "field_type": 1003,
+          "key_field": "性别",
+          "key_column": 2,
+          "key_row": 4,
+          "value_column": 3,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1007,
+          "key_field": "专业",
+          "key_column": 2,
+          "key_row": 7,
+          "value_column": 3,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1012,
+          "key_field": "职务",
+          "key_column": 2,
+          "key_row": 8,
+          "value_column": 3,
+          "value_row": [
+            8
+          ]
+        },
+        {
+          "field_type": 1008,
+          "key_field": "学校及单位名称",
+          "key_column": 2,
+          "key_row": 16,
+          "value_column": 2,
+          "value_row": [
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ]
+        },
+        {
+          "field_type": 1006,
+          "key_field": "出生日期",
+          "key_column": 4,
+          "key_row": 4,
+          "value_column": 5,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1013,
+          "key_field": "婚姻状况",
+          "key_column": 4,
+          "key_row": 6,
+          "value_column": 5,
+          "value_row": [
+            6
+          ]
+        }
+      ],
+      "isUsed": true
+    },
+    {
+      "regexName": "3, (2015-08-28第9版)",
+      "regexFields": [
+        {
+          "field_type": 1001,
+          "key_field": "姓名",
+          "key_column": 0,
+          "key_row": 4,
+          "value_column": 1,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1009,
+          "key_field": "学历",
+          "key_column": 0,
+          "key_row": 7,
+          "value_column": 1,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1011,
+          "key_field": "职业",
+          "key_column": 0,
+          "key_row": 8,
+          "value_column": 1,
+          "value_row": [
+            8
+          ]
+        },
+        {
+          "field_type": 1010,
+          "key_field": "外语语种（水平）",
+          "key_column": 0,
+          "key_row": 10,
+          "value_column": 1,
+          "value_row": [
+            10
+          ]
+        },
+        {
+          "field_type": 1015,
+          "key_field": "承担部组",
+          "key_column": 0,
+          "key_row": 11,
+          "value_column": 1,
+          "value_row": [
+            11
+          ]
+        },
+        {
+          "field_type": 1002,
+          "key_field": "手机号码",
+          "key_column": 0,
+          "key_row": 12,
+          "value_column": 1,
+          "value_row": [
+            12
+          ]
+        },
+        {
+          "field_type": 1014,
+          "key_field": "家庭地址",
+          "key_column": 0,
+          "key_row": 13,
+          "value_column": 1,
+          "value_row": [
+            13
+          ]
+        },
+        {
+          "field_type": 1003,
+          "key_field": "性别",
+          "key_column": 2,
+          "key_row": 4,
+          "value_column": 3,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1007,
+          "key_field": "专业",
+          "key_column": 2,
+          "key_row": 7,
+          "value_column": 3,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1012,
+          "key_field": "职务",
+          "key_column": 2,
+          "key_row": 8,
+          "value_column": 3,
+          "value_row": [
+            8
+          ]
+        },
+        {
+          "field_type": 1008,
+          "key_field": "学校及单位名称",
+          "key_column": 2,
+          "key_row": 16,
+          "value_column": 2,
+          "value_row": [
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ]
+        },
+        {
+          "field_type": 1006,
+          "key_field": "出生日期",
+          "key_column": 4,
+          "key_row": 4,
+          "value_column": 5,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1013,
+          "key_field": "婚姻状况",
+          "key_column": 4,
+          "key_row": 6,
+          "value_column": 5,
+          "value_row": [
+            6
+          ]
+        }
+      ],
+      "isUsed": true
+    },
+    {
+      "regexName": "4, (2015-09-12第9版)多常住日期",
+      "regexFields": [
+        {
+          "field_type": 1001,
+          "key_field": "姓名",
+          "key_column": 0,
+          "key_row": 4,
+          "value_column": 1,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1009,
+          "key_field": "学历",
+          "key_column": 0,
+          "key_row": 7,
+          "value_column": 1,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1011,
+          "key_field": "职业",
+          "key_column": 0,
+          "key_row": 8,
+          "value_column": 1,
+          "value_row": [
+            8
+          ]
+        },
+        {
+          "field_type": 1010,
+          "key_field": "外语语种（水平）",
+          "key_column": 0,
+          "key_row": 10,
+          "value_column": 1,
+          "value_row": [
+            10
+          ]
+        },
+        {
+          "field_type": 1015,
+          "key_field": "承担部组",
+          "key_column": 0,
+          "key_row": 11,
+          "value_column": 1,
+          "value_row": [
+            11
+          ]
+        },
+        {
+          "field_type": 1002,
+          "key_field": "手机号码",
+          "key_column": 0,
+          "key_row": 13,
+          "value_column": 1,
+          "value_row": [
+            13
+          ]
+        },
+        {
+          "field_type": 1014,
+          "key_field": "户口所在地",
+          "key_column": 0,
+          "key_row": 14,
+          "value_column": 1,
+          "value_row": [
+            14
+          ]
+        },
+        {
+          "field_type": 1003,
+          "key_field": "性别",
+          "key_column": 2,
+          "key_row": 4,
+          "value_column": 3,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1007,
+          "key_field": "专业",
+          "key_column": 2,
+          "key_row": 7,
+          "value_column": 3,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1012,
+          "key_field": "职务",
+          "key_column": 2,
+          "key_row": 8,
+          "value_column": 3,
+          "value_row": [
+            8
+          ]
+        },
+        {
+          "field_type": 1008,
+          "key_field": "学校及单位名称",
+          "key_column": 2,
+          "key_row": 21,
+          "value_column": 2,
+          "value_row": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        },
+        {
+          "field_type": 1006,
+          "key_field": "出生日期",
+          "key_column": 4,
+          "key_row": 4,
+          "value_column": 5,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1013,
+          "key_field": "婚姻状况",
+          "key_column": 4,
+          "key_row": 6,
+          "value_column": 5,
+          "value_row": [
+            6
+          ]
+        }
+      ],
+      "isUsed": true
+    },
+    {
+      "regexName": "5,(2016-07-18 201607版)",
+      "regexFields": [
+        {
+          "field_type": 1001,
+          "key_field": "姓名",
+          "key_column": 0,
+          "key_row": 4,
+          "value_column": 1,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1009,
+          "key_field": "最高学历",
+          "key_column": 0,
+          "key_row": 7,
+          "value_column": 1,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1011,
+          "key_field": "职业",
+          "key_column": 0,
+          "key_row": 9,
+          "value_column": 1,
+          "value_row": [
+            9
+          ]
+        },
+        {
+          "field_type": 1015,
+          "key_field": "承担部组",
+          "key_column": 0,
+          "key_row": 11,
+          "value_column": 1,
+          "value_row": [
+            11
+          ]
+        },
+        {
+          "field_type": 1002,
+          "key_field": "手机号码",
+          "key_column": 0,
+          "key_row": 13,
+          "value_column": 1,
+          "value_row": [
+            13
+          ]
+        },
+        {
+          "field_type": 1014,
+          "key_field": "户口所在地",
+          "key_column": 0,
+          "key_row": 14,
+          "value_column": 1,
+          "value_row": [
+            14
+          ]
+        },
+        {
+          "field_type": 1003,
+          "key_field": "性别",
+          "key_column": 2,
+          "key_row": 4,
+          "value_column": 3,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1010,
+          "key_field": "外语1、水平",
+          "key_column": 2,
+          "key_row": 8,
+          "value_column": 3,
+          "value_row": [
+            8
+          ]
+        },
+        {
+          "field_type": 1012,
+          "key_field": "职务",
+          "key_column": 2,
+          "key_row": 9,
+          "value_column": 3,
+          "value_row": [
+            9
+          ]
+        },
+        {
+          "field_type": 1006,
+          "key_field": "出生日期",
+          "key_column": 4,
+          "key_row": 4,
+          "value_column": 5,
+          "value_row": [
+            4
+          ]
+        },
+        {
+          "field_type": 1013,
+          "key_field": "婚姻状况",
+          "key_column": 4,
+          "key_row": 6,
+          "value_column": 5,
+          "value_row": [
+            6
+          ]
+        },
+        {
+          "field_type": 1007,
+          "key_field": "专业",
+          "key_column": 4,
+          "key_row": 7,
+          "value_column": 5,
+          "value_row": [
+            7
+          ]
+        },
+        {
+          "field_type": 1008,
+          "key_field": "所在学校",
+          "key_column": 3,
+          "key_row": 21,
+          "value_column": 3,
+          "value_row": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      ],
+      "isUsed": true
+    }
+  ]
+}

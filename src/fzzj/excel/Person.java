@@ -3,6 +3,7 @@ package fzzj.excel;
 import java.io.File;
 import java.util.ArrayList;
 
+import fzzj.test.regex.Regex;
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -46,7 +47,7 @@ public class Person {
 	public String changzhu_buzu;
 
 	Sheet sheet;
-	File file;
+	public File file;
 
 	public Person(Sheet sheet) {
 		this.sheet = sheet;
@@ -150,11 +151,12 @@ public class Person {
 	 * @param regex
 	 * @return 規則可以全部正確的讀取數據，結束外層（其他規則）循環 true： name ！= null,有数据，表示不需要读取下一个规则
 	 */
-	public boolean analysisRegex(ArrayList<FieldPosition> regex) {
+	public boolean analysisRegex(Regex regex) {
+		ArrayList<FieldPosition> fieldPositions = regex.regexFields;
 		try {
 			Workbook wb = Workbook.getWorkbook(file);
 			// 第一列的值，获取第一行，
-			for (FieldPosition fieldPosition : regex) {
+			for (FieldPosition fieldPosition : fieldPositions) {
 				sheet = wb.getSheet(0); // 从工作区中取得页（Sheet）
 				if (fieldPosition.validateField(sheet)) {
 					// 表示字段名相當,開始記錄真實數據
@@ -166,6 +168,9 @@ public class Person {
 					if (fieldPosition.validateField(sheet)) {
 						// 表示字段名相當,開始記錄真實數據
 						setData(fieldPosition);
+					} else {
+						// 需要读取下一个。
+						return false;
 					}
 				}
 			}
@@ -174,6 +179,13 @@ public class Person {
 		}
 		// name ！= null,表示不需要读取下一个规则
 		return name != null;
+	}
+
+	public boolean isNoValue() {
+		// || group == null || role == null
+		return name == null || phone == null || sex == null || from_date == null || zhuan_ye == null || school == null
+				|| education == null || language_class == null || occupation == null || job == null || marriage == null
+				|| Hukou == null || changzhu_buzu == null;
 	}
 
 	// 上山常住时间
